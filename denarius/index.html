@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Denarius — João Crepaldi</title>
+
+<meta name="description" content="Case Denarius: produto, marca e direção visual de um cockpit de gasto com IA.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icon.png">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body style="--c:#e65f2e;--c2:#7a2a0e">
+
+<header class="top">
+  <a class="name" href="../">João Crepaldi</a>
+  <div class="right">
+    <nav class="mnav" aria-label="Principal"><a href="../" aria-current="page">Trabalho</a><a href="../sobre/">Sobre</a></nav>
+    <button class="theme-toggle" type="button" aria-label="Mudar tema">
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="frame">
+  <aside class="side">
+    <nav class="sitenav" aria-label="Principal">
+      <a href="../" aria-current="page">Trabalho</a>
+      <a href="../sobre/">Sobre</a>
+    </nav>
+    <div class="toc" aria-label="Sumário">
+      <span class="label">Nesta página</span>
+      <ol>
+        <li><a href="#problema">Problema</a></li>
+        <li><a href="#solucao">Solução</a></li>
+        <li><a href="#marca">Marca</a></li>
+        <li class="sub"><a href="#logo">Logo</a></li>
+        <li class="sub"><a href="#texturas">Texturas</a></li>
+        <li class="sub"><a href="#sistema">Sistema</a></li>
+        <li class="sub"><a href="#divulgacao">Divulgação</a></li>
+        <li><a href="#landing">Landing</a></li>
+        <li><a href="#video">Vídeo</a></li>
+        <li><a href="#papel">Meu papel</a></li>
+      </ol>
+    </div>
+  </aside>
+
+  <main class="content">
+    <header class="case-head">
+      <h1>Denarius</h1>
+      <p class="lede">Diz ao CEO, em dez segundos, se o gasto da empresa com IA está sob controle e avisa antes que a fatura diga o contrário.</p>
+      <dl class="facts">
+        <div><dt>Papel</dt><dd>Projeto solo, de ponta a ponta</dd></div>
+        <div><dt>Tipo</dt><dd>SaaS B2B · projeto paralelo</dd></div>
+        <div><dt>Ano</dt><dd>2026 · beta fechado</dd></div>
+        <div><dt>No ar</dt><dd><a href="https://www.usedenarius.pro/" target="_blank" rel="noopener">usedenarius.pro</a></dd></div>
+      </dl>
+    </header>
+
+    <div class="stage"><video src="../assets/denarius/demo.mp4" muted loop playsinline preload="metadata" data-autoplay aria-label="Demonstração do painel do Denarius"></video></div>
+
+    <section id="problema">
+      <header>
+        <span class="eyebrow">Problema</span>
+        <h2>A conta da IA chega antes do controle.</h2>
+        <p>Empresas de 20 a 200 pessoas adotaram IA rápido, mas não têm time nem tempo para montar um painel interno de custos. Os gastos ficam espalhados entre provedores, em dólar, e o estouro só aparece quando a fatura chega.</p>
+      </header>
+    </section>
+
+    <section id="solucao">
+      <header>
+        <span class="eyebrow">Solução</span>
+        <h2>Um veredito antes de qualquer número.</h2>
+        <p>O Denarius conecta OpenAI e Anthropic em modo somente leitura, converte tokens em reais, divide o gasto por time e responde se o mês vai fechar dentro do orçamento: no controle, atenção ou estourado.</p>
+      </header>
+
+      <div class="block">
+        <div class="label">
+          <span class="eyebrow">Princípios</span>
+          <h3>Três regras que decidiram as telas.</h3>
+        </div>
+        <ul class="principles">
+          <li><strong>Veredito antes de gráfico</strong><span>A primeira coisa na tela é a resposta: no controle, atenção ou estourado.</span></li>
+          <li><strong>Número honesto</strong><span>Todo número principal mostra quando foi atualizado. O que não tem dono aparece como “não atribuído” e nunca some do total.</span></li>
+          <li><strong>Controle sem vigilância</strong><span>O gasto é visto por time, nunca em ranking de pessoas.</span></li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <div class="label">
+          <span class="eyebrow">Arquitetura</span>
+          <h3>O produto organizado em torno de uma pergunta.</h3>
+          <p>O Início responde “estou no controle?”. Times serve ao diagnóstico, e Explorar fica com os recortes que não são por time. Nos gráficos, bullet charts comparam gasto e orçamento, linhas acumuladas aprofundam, e as cores de semáforo ficam reservadas ao status do orçamento.</p>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="label">
+          <span class="eyebrow">Estrutura</span>
+          <h3>Veredito primeiro, detalhe depois.</h3>
+          <p>O wireframe já colocava o veredito no topo e o gráfico como prova. Cada número passou por crítica anotada.</p>
+        </div>
+        <div class="grid2">
+          <figure><div class="shot"><img src="../assets/denarius/wireframe.jpg" alt="Wireframe: veredito, gasto por mês, análise de IA, gasto por fonte e gráfico"></div><figcaption>Wireframe da tela inicial.</figcaption></figure>
+          <figure><div class="shot"><img src="../assets/denarius/iteracao.jpg" alt="Card de gasto do mês com anotações à mão sobre a barra de progresso"></div><figcaption>Crítica anotada: número, rótulo e estado de alerta.</figcaption></figure>
+        </div>
+      </div>
+
+      <div class="block">
+        <div class="label">
+          <span class="eyebrow">Primeiro uso</span>
+          <h3>Onde encontrar cada coisa.</h3>
+          <p>A boas-vindas apresenta o painel em três lugares e sai do caminho.</p>
+        </div>
+        <div class="shot"><img src="../assets/denarius/onboarding.jpg" alt="Modal de boas-vindas ao Denarius sobre o painel desfocado" loading="lazy"></div>
+      </div>
+
+      <div class="block">
+        <div class="split">
+          <div class="label text">
+            <span class="eyebrow">Alertas</span>
+            <h3>O Denarius vai até você.</h3>
+            <p>Ninguém precisa abrir o painel para saber que algo mudou. Quando um time passa da projeção, chega um e-mail com a situação do período e o que dá para fazer. E o mês em andamento vira relatório em PDF para o conselho ou o contador.</p>
+            <p>As recomendações só apontam o caminho: a decisão é do usuário, e nada é aplicado sozinho.</p>
+          </div>
+          <div class="shot"><img src="../assets/denarius/email.jpg" alt="E-mail de alerta do Denarius: projeção acima do orçamento em Engenharia, com situação do período e recomendações" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="marca">
+      <header>
+        <span class="eyebrow">Marca</span>
+        <h2>Uma moeda, um arco e um D.</h2>
+        <p>Denarius era a moeda de prata de Roma. A marca parte dela: o símbolo junta moeda, arco romano e inicial, e as texturas trazem matéria orgânica para um produto feito de números.</p>
+      </header>
+
+      <div class="block" id="logo">
+        <div class="label">
+          <span class="eyebrow">Logo</span>
+          <h3>Moeda + arco + D = símbolo.</h3>
+          <p>Os testes de forma e tipografia, a geometria na grade, a ideia em uma linha e o refinamento até a assinatura final.</p>
+        </div>
+        <div class="stack">
+          <div class="grid2 logo-grid">
+            <div class="shot paper"><img src="../assets/denarius/logo-exploracao.png" alt="Exploração da marca: linhas formando a moeda, testes tipográficos de Denarius e composições do símbolo com a palavra" loading="lazy"></div>
+            <div class="shot paper"><img src="../assets/denarius/logo-geometria.png" alt="Construção geométrica do símbolo em grade, com duas proporções de base" loading="lazy"></div>
+            <div class="shot paper"><img src="../assets/denarius/logo-equacao.png" alt="Moeda romana mais arco romano mais a letra D é igual ao símbolo do Denarius" loading="lazy"></div>
+            <div class="shot paper"><img src="../assets/denarius/logo-trajeto.png" alt="Refinamento do símbolo: o recorte reto da primeira versão vira o traço curvo da final" loading="lazy"></div>
+          </div>
+          <div class="shot paper"><img src="../assets/denarius/logo-construcao.png" alt="Construção da assinatura em grade: símbolo e palavra denarius em Poppins" loading="lazy"></div>
+          <div class="shot"><img src="../assets/denarius/logo-final.png" alt="Logo final do Denarius: símbolo laranja e palavra branca sobre preto" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="block" id="texturas">
+        <div class="label">
+          <span class="eyebrow">Texturas</span>
+          <h3>Plantas no microscópio.</h3>
+          <p>Os fundos da marca são fotos microscópicas de plantas, tratadas em laranja. Depois, viram o fundo do painel e das seções da landing.</p>
+        </div>
+        <figure><img src="../assets/denarius/referencias.png" alt="Fotos microscópicas originais de plantas: uma flor, células de folha e tecidos verdes" style="width:min(603px,100%)"><figcaption>Fotos originais.</figcaption></figure>
+        <div class="arrow">tratadas em laranja</div>
+        <div class="grid4">
+          <div class="shot"><img src="../assets/denarius/tex-1.jpg" alt="Textura laranja a partir de uma flor" loading="lazy"></div>
+          <div class="shot"><img src="../assets/denarius/tex-2.jpg" alt="Textura laranja a partir de células de folha" loading="lazy"></div>
+          <div class="shot"><img src="../assets/denarius/tex-3.jpg" alt="Textura laranja a partir de tecido vegetal" loading="lazy"></div>
+          <div class="shot"><img src="../assets/denarius/tex-4.jpg" alt="Textura laranja a partir de nervuras de folha" loading="lazy"></div>
+        </div>
+        <div class="arrow">aplicadas no produto</div>
+        <div class="stack">
+          <div class="shot"><img src="../assets/denarius/secao-composicao.jpg" alt="Seção da landing: conectar OpenAI e Anthropic em modo somente leitura sobre a textura laranja" loading="lazy"></div>
+          <div class="shot"><img src="../assets/denarius/secao-alertas.jpg" alt="Seção da landing: relatório do mês em PDF, com resumo executivo e gastos por provedor e time, sobre a textura laranja" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="block" id="sistema">
+        <div class="label">
+          <span class="eyebrow">Sistema</span>
+          <h3>Regras anotadas.</h3>
+          <p>Poppins nos títulos, DM Mono nos textos explicativos, botões laranja com texto preto e um grid guia que intercala as seções.</p>
+        </div>
+        <div class="stack">
+          <div class="shot"><img src="../assets/denarius/sistema.jpg" alt="Folha de sistema visual com cards, moeda, botões, tipografia e anotações" loading="lazy"></div>
+          <div class="shot"><img src="../assets/denarius/marca.jpg" alt="Quadro de exploração: logos, texturas, moeda e aplicações" loading="lazy"></div>
+        </div>
+      </div>
+
+      <div class="block" id="divulgacao">
+        <div class="label">
+          <span class="eyebrow">Divulgação</span>
+          <h3>Uma pergunta, quatro posts.</h3>
+          <p>Série de lançamento que vai da dor ao convite: quanto a empresa vai gastar, a resposta diária, a simulação e o beta fechado.</p>
+        </div>
+        <div class="carousel">
+          <button class="cbtn prev" type="button" aria-label="Post anterior">‹</button>
+          <div class="track">
+            <div class="shot"><img src="../assets/denarius/post-1.jpg" alt="Post: Quanto a sua empresa vai gastar com IA este mês?" loading="lazy"></div>
+            <div class="shot"><img src="../assets/denarius/post-2.jpg" alt="Post: Todo dia, uma resposta: o mês fecha dentro do orçamento?" loading="lazy"></div>
+            <div class="shot"><img src="../assets/denarius/post-3.jpg" alt="Post: Quando não fecha, você simula a saída antes da fatura" loading="lazy"></div>
+            <div class="shot"><img src="../assets/denarius/post-4.jpg" alt="Post: Em beta fechado, peça uma demonstração em usedenarius.pro" loading="lazy"></div>
+          </div>
+          <button class="cbtn next" type="button" aria-label="Próximo post">›</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="landing">
+      <header>
+        <span class="eyebrow">Landing</span>
+        <h2>Da primeira versão à atual.</h2>
+        <p>Antes, o topo era escuro com foco em governança de gasto com IA e o painel logo na primeira dobra. Depois, as texturas de papel vieram para trás do painel e a promessa ganhou a simulação da saída antes da fatura. Arraste para comparar.</p>
+      </header>
+      <div class="compare">
+        <img src="../assets/denarius/landing-simulacao.jpg" alt="Depois: topo escuro, selo de beta fechado, a promessa de simular a saída antes da fatura e o painel sobre a textura de papel">
+        <img class="before" src="../assets/denarius/landing-atual.jpg" alt="Antes: hero de governança de gastos com IA e o painel do Denarius em primeiro plano">
+        <div class="bar"></div>
+        <span class="lbl l">Antes</span><span class="lbl r">Depois</span>
+        <input type="range" min="0" max="100" value="50" aria-label="Comparar landing antiga e atual">
+      </div>
+    </section>
+
+    <section id="video">
+      <header>
+        <span class="eyebrow">Vídeo</span>
+        <h2>O produto em movimento.</h2>
+        <p>O app em uso foi gravado a partir de uma demo gerada com Claude. Os zooms, cortes e movimentos de câmera fui eu que fiz.</p>
+      </header>
+      <div class="shot"><video src="../assets/denarius/demo.mp4" muted loop playsinline controls preload="metadata"></video></div>
+    </section>
+
+    <section id="papel">
+      <header>
+        <span class="eyebrow">Meu papel</span>
+        <h2>Quem fez o quê.</h2>
+      </header>
+      <div class="role">
+        <p class="note">Projeto paralelo e solo: produto, design, desenvolvimento e infraestrutura. Feito com IA, dirigido por mim.</p>
+        <ul>
+          <li><b>À mão</b><span>Pergunta central, arquitetura da informação, wireframes, princípios, critério de cada tela, construção do logo, texturas a partir das fotos de microscópio, sistema visual, direção das duas landings e a edição do vídeo.</span></li>
+          <li><b>Com IA</b><span>O desenvolvimento, conduzido com agentes de IA de programação: prompts em fases, pontos de aprovação e auditoria de QA automatizada. Daí saíram o painel, as integrações com as APIs da OpenAI e da Anthropic, os alertas por e-mail, os relatórios em PDF, a landing e a demo do vídeo.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <a class="next" href="../oris/" style="--c:#3b8cf6">
+      <span class="eyebrow">Próximo</span>
+      <strong>Oris →</strong>
+    </a>
+
+    <footer class="foot">
+      <span class="copy">© 2026 João Crepaldi</span>
+      <a href="https://www.linkedin.com/in/joocrepaldi/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/JooCrepaldi" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:joocrepaldi.pro@gmail.com">Email</a>
+    </footer>
+  </main>
+</div>
+
+<script src="../site.js"></script>
+</body>
+</html>

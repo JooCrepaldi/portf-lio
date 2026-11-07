@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oris — João Crepaldi</title>
+
+<meta name="description" content="Case Oris: experiência, interface, design system e motion de um planejador de hábitos.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../icon.png">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body style="--c:#3b8cf6;--c2:#173a7a">
+
+<header class="top">
+  <a class="name" href="../">João Crepaldi</a>
+  <div class="right">
+    <nav class="mnav" aria-label="Principal"><a href="../" aria-current="page">Trabalho</a><a href="../sobre/">Sobre</a></nav>
+    <button class="theme-toggle" type="button" aria-label="Mudar tema">
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    </button>
+  </div>
+</header>
+
+<div class="frame">
+  <aside class="side">
+    <nav class="sitenav" aria-label="Principal">
+      <a href="../" aria-current="page">Trabalho</a>
+      <a href="../sobre/">Sobre</a>
+    </nav>
+    <div class="toc" aria-label="Sumário">
+      <span class="label">Nesta página</span>
+      <ol>
+        <li><a href="#problema">Problema</a></li>
+        <li><a href="#solucao">Solução</a></li>
+        <li><a href="#desenho">O desenho</a></li>
+        <li class="sub"><a href="#ux">UX</a></li>
+        <li class="sub"><a href="#wireframe">Wireframe</a></li>
+        <li class="sub"><a href="#interface">Interface</a></li>
+        <li class="sub"><a href="#sistema">Design system</a></li>
+        <li><a href="#marca">Marca</a></li>
+        <li><a href="#motion">Motion</a></li>
+        <li><a href="#papel">Meu papel</a></li>
+      </ol>
+    </div>
+  </aside>
+
+  <main class="content">
+    <header class="case-head">
+      <h1>Oris</h1>
+      <p class="lede">Planejador de hábitos que conecta à agenda, encaixa cada hábito no tempo livre e ajusta o plano quando o dia muda.</p>
+      <dl class="facts">
+        <div><dt>Papel</dt><dd>Proposta de valor, experiência, interface e marca</dd></div>
+        <div><dt>Tipo</dt><dd>App mobile · TCC com dois colegas</dd></div>
+        <div><dt>Ano</dt><dd>2025–2026</dd></div>
+        <div><dt>No ar</dt><dd><a href="https://website-oris.vercel.app/" target="_blank" rel="noopener">website-oris.vercel.app</a></dd></div>
+      </dl>
+    </header>
+
+    <div class="stage canvas"><img src="../assets/oris/pixel.jpg" alt="Quatro telas do Oris em celulares: início, chat de criação de hábito, timer e dashboard"></div>
+
+    <section id="problema">
+      <header>
+        <span class="eyebrow">Problema</span>
+        <h2>O plano quebra quando o dia muda.</h2>
+        <p>Apps de hábito costumam tratar a semana como se ela fosse sempre igual. Surge uma reunião nova, o horário do hábito some, a sequência quebra e o que sobra é culpa.</p>
+      </header>
+      <div class="block" id="solucao">
+        <div class="label">
+          <span class="eyebrow">Solução</span>
+          <h3>O usuário cuida do hábito. O Oris cuida do resto.</h3>
+          <p>O Oris conecta à agenda, encontra o melhor horário para cada hábito e reorganiza o plano sozinho quando algo muda. Criar um hábito é uma conversa, não um formulário, e sessão perdida vira recuperação, não bronca.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="desenho">
+      <header>
+        <span class="eyebrow">O desenho</span>
+        <h2>Do fluxo à tela final.</h2>
+        <p>O caminho inteiro do projeto: o fluxo, os wireframes, a interface e o sistema que mantém tudo consistente.</p>
+      </header>
+      <div class="block" id="ux">
+        <div class="label">
+          <span class="eyebrow">UX</span>
+          <h3>O fluxo antes das telas.</h3>
+          <p>Antes de desenhar qualquer tela, mapeei o caminho inteiro: cadastro e login, criação do primeiro hábito, as cinco abas (início, timer, chat, desempenho e perfil) e a integração com o Google Calendar. O chat é o atalho: a IA monta o hábito e só pergunta o que falta.</p>
+        </div>
+        <div class="shot"><img src="../assets/oris/userflow.jpg" alt="Userflow do Oris: página de compromisso, cadastro e login, escolha de foco, criação do primeiro hábito, abas do app e integração com o Google Calendar" loading="lazy"></div>
+      </div>
+      <div class="block" id="wireframe">
+        <div class="label">
+          <span class="eyebrow">Wireframe</span>
+          <h3>Estrutura primeiro, acabamento depois.</h3>
+          <p>Doze telas em baixa fidelidade: login e cadastro, início com hábitos e atividades, timer, configurações, chat criando um hábito, desempenho e perfil.</p>
+        </div>
+        <div class="shot"><img src="../assets/oris/wireframes.jpg" alt="Doze wireframes numerados do Oris: login, cadastro, início, hábitos, timer, configurações, chat, desempenho e perfil" loading="lazy"></div>
+      </div>
+      <div class="block" id="interface">
+        <div class="label">
+          <span class="eyebrow">Interface</span>
+          <h3>O app inteiro, desenhado à mão.</h3>
+          <p>A primeira versão foi toda desenhada no Figma: do cadastro às configurações, em tema claro e escuro. Depois, cada tela foi refinada até a versão final.</p>
+        </div>
+        <div class="stack">
+          <figure>
+            <div class="shot"><img src="../assets/oris/telas-final.jpg" alt="Telas finais do Oris em tema claro e escuro: cadastro, login, início, timer, chat, desempenho, configurações e conta" loading="lazy"></div>
+            <figcaption>Versão final, em tema claro e escuro.</figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="block" id="sistema">
+        <div class="label">
+          <span class="eyebrow">Design system</span>
+          <h3>Um sistema para claro e escuro.</h3>
+          <p>Cores e estados definidos para os dois temas, com o azul do Oris como acento; escala tipográfica (Display, Section, Body, Caption e Micro), raios de 16 a 1000 e uma sombra única de elevação.</p>
+        </div>
+        <div class="shot"><img src="../assets/oris/design-system.jpg" alt="Tokens do design system do Oris: cores em tema claro e escuro, azul de acento, escala tipográfica, raios e sombra" loading="lazy"></div>
+      </div>
+    </section>
+
+    <section id="marca">
+      <header>
+        <span class="eyebrow">Marca</span>
+        <h2>Peças que se encaixam.</h2>
+        <p>Três formas que se apoiam, como hábitos encaixados numa semana real.</p>
+      </header>
+      <div class="stack">
+        <div class="grid2">
+          <div class="logo-panel" style="background:#f2f2f0"><img src="../assets/oris/logo-dark.svg" alt="Logo do Oris em preto sobre fundo claro"></div>
+          <div class="logo-panel" style="background:#111"><img src="../assets/oris/logo.svg" alt="Logo do Oris em branco sobre fundo escuro"></div>
+        </div>
+        <div class="shot"><img src="../assets/oris/icones.jpg" alt="Explorações do ícone do Oris em azul e em fundo escuro" loading="lazy"></div>
+      </div>
+    </section>
+
+    <section id="motion">
+      <header>
+        <span class="eyebrow">Motion</span>
+        <h2>“Mudou o plano? Ele se adapta.”</h2>
+        <p>Vídeo de apresentação animado no Jitter e editado à mão.</p>
+      </header>
+      <div class="shot"><video src="../assets/oris/motion.mp4" muted loop playsinline controls preload="metadata"></video></div>
+    </section>
+
+    <section id="papel">
+      <header>
+        <span class="eyebrow">Meu papel</span>
+        <h2>Quem fez o quê.</h2>
+      </header>
+      <div class="role">
+        <p class="note">O projeto mais feito à mão do portfólio. A IA entrou no fim, para levar o que foi desenhado para o código.</p>
+        <ul>
+          <li><b>À mão</b><span>Proposta de valor, experiência, marca, ícone, todas as telas da v1 no Figma, posts e o vídeo (Jitter + edição).</span></li>
+          <li><b>Com IA</b><span>A interface em código da versão final, a partir do que foi desenhado.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <a class="next" href="../marca/" style="--c:#65a30d">
+      <span class="eyebrow">Próximo</span>
+      <strong>Marca para software →</strong>
+    </a>
+
+    <footer class="foot">
+      <span class="copy">© 2026 João Crepaldi</span>
+      <a href="https://www.linkedin.com/in/joocrepaldi/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/JooCrepaldi" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:joocrepaldi.pro@gmail.com">Email</a>
+    </footer>
+  </main>
+</div>
+
+<script src="../site.js"></script>
+</body>
+</html>

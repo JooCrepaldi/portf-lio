@@ -1,0 +1,4 @@
+{"version":"0.0.1","configurations":[
+{"name":"portfolio","runtimeExecutable":"node","runtimeArgs":["server.js"],"port":5173},
+{"name":"material","runtimeExecutable":"node","runtimeArgs":["server.js","C:/Users/joaop/Downloads/portfólio","5174"],"port":5174}
+]}
