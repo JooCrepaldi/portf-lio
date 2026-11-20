@@ -16,15 +16,33 @@ document.querySelectorAll('.theme-toggle').forEach(btn => {
 
 // Videos marked data-autoplay play only while on screen.
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const scrollBehavior = reduceMotion ? 'auto' : 'smooth';
 const autoVideos = document.querySelectorAll('video[data-autoplay]');
+const motionToggle = document.querySelector('.motion-toggle');
+const visibleVideos = new Set();
+let motionPaused = false;
 if (!reduceMotion && 'IntersectionObserver' in window) {
   const io = new IntersectionObserver(entries => {
     entries.forEach(({ target, isIntersecting }) => {
-      if (isIntersecting) target.play().catch(() => {});
+      if (isIntersecting) visibleVideos.add(target);
+      else visibleVideos.delete(target);
+      if (isIntersecting && !motionPaused) target.play().catch(() => {});
       else target.pause();
     });
   }, { threshold: 0.25 });
   autoVideos.forEach(v => io.observe(v));
+  if (motionToggle && autoVideos.length) {
+    motionToggle.hidden = false;
+    motionToggle.addEventListener('click', () => {
+      motionPaused = !motionPaused;
+      motionToggle.classList.toggle('paused', motionPaused);
+      motionToggle.setAttribute('aria-label', motionPaused ? 'Reproduzir vídeos' : 'Pausar vídeos');
+      autoVideos.forEach(v => {
+        if (motionPaused) v.pause();
+        else if (visibleVideos.has(v)) v.play().catch(() => {});
+      });
+    });
+  }
 }
 
 // Table of contents: highlight the section being read.
@@ -39,7 +57,7 @@ if (tocLinks.length) {
     tocLinks.forEach(a => a.classList.toggle('active', a === byId.get(id)));
     const link = byId.get(id);
     const bar = link && link.closest('ol');
-    if (bar && bar.scrollWidth > bar.clientWidth) bar.scrollTo({ left: link.offsetLeft - 16, behavior: 'smooth' });
+    if (bar && bar.scrollWidth > bar.clientWidth) bar.scrollTo({ left: link.offsetLeft - 16, behavior: scrollBehavior });
   };
   const onScroll = () => {
     let current = targets[0];
@@ -65,7 +83,7 @@ document.querySelectorAll('.compare').forEach(cmp => {
 // Carousel: botões avançam/atrasam um post por clique.
 document.querySelectorAll('.carousel').forEach(c => {
   const track = c.querySelector('.track');
-  const step = () => track.firstElementChild.getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap || 10);
-  c.querySelector('.prev').addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
-  c.querySelector('.next').addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+  const step = () => track.firstElementChild.getBoundingClientRect().width + (parseFloat(getComputedStyle(track).columnGap) || 0);
+  c.querySelector('.prev').addEventListener('click', () => track.scrollBy({ left: -step(), behavior: scrollBehavior }));
+  c.querySelector('.next').addEventListener('click', () => track.scrollBy({ left: step(), behavior: scrollBehavior }));
 });

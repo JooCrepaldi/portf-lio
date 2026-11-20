@@ -41,10 +41,14 @@ h1,h2,h3,strong,b{font-weight:400}
 .top .mnav{display:none;gap:16px}
 .top .mnav a{color:var(--faint)}
 .top .mnav a[aria-current]{color:var(--accent)}
-.theme-toggle{width:32px;height:32px;border:0;background:none;color:var(--faint);display:grid;place-items:center;cursor:pointer;border-radius:50%;transition:color .2s;margin-right:-8px}
-.theme-toggle:hover{color:var(--text)}
-.theme-toggle svg{width:16px;height:16px}
-.theme-toggle .sun{display:none}
+.theme-toggle,.motion-toggle{width:32px;height:32px;border:0;background:none;color:var(--faint);display:grid;place-items:center;cursor:pointer;border-radius:50%;transition:color .2s}
+.theme-toggle:hover,.motion-toggle:hover{color:var(--text)}
+.theme-toggle svg,.motion-toggle svg{width:16px;height:16px}
+.theme-toggle .sun,.motion-toggle .play{display:none}
+.motion-toggle[hidden]{display:none}
+.motion-toggle.paused .pause{display:none}
+.motion-toggle.paused .play{display:block}
+.top .right > :last-child{margin-right:-8px}
 :root[data-theme="dark"] .theme-toggle .sun{display:block}
 :root[data-theme="dark"] .theme-toggle .moon{display:none}
 @media (prefers-color-scheme:dark){
